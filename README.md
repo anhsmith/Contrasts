@@ -30,6 +30,9 @@ Make a factor `x` with three levels and uneven sample sizes.
 
 ``` r
 x = factor(rep(letters[1:3], times=4:6))
+x
+#>  [1] a a a a b b b b b c c c c c c
+#> Levels: a b c
 ```
 
 Make the contrasts.
