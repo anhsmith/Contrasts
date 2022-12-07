@@ -1,0 +1,42 @@
+---
+title: "Make weighted orthogonal sum-to-zero contrasts"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Make weighted orthogonal sum-to-zero contrasts}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r setup, warning = FALSE}
+library(Contrasts)
+library(dplyr)
+```
+
+
+Take a factor `x` and make contrasts.
+
+```{r}
+x = factor(rep(letters[1:3], times=4:6))
+bind_cols(x = x, make_weightzero_contrasts(x))
+```
+
+Take a factor `x` and a factor `y_in_x` that is nested in `x`, and make contrasts for each.
+
+```{r}
+y_in_x = factor(paste0(x,c(1,1,2,2,1,1,2,2,3,1,2,2,2,3,3)))
+
+bind_cols(
+   x=x, y_in_x=y_in_x,
+   make_weightzero_contrasts(x),
+   make_weightzero_nested_contrasts(y_in_x, x)
+ )
+```
+

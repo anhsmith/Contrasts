@@ -2,18 +2,18 @@
 % Please edit documentation in R/make_weightzero_contrasts.R
 \name{make_weightzero_contrasts}
 \alias{make_weightzero_contrasts}
-\title{Make weighted sum-to-zero contrasts for a factor}
+\title{Make weighted sum-to-zero contrasts for a single factor}
 \usage{
 make_weightzero_contrasts(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{A vector from which to to make contrasts. Can be character or factor.}
 }
 \value{
-cont
+\code{make_weightzero_contrasts}
 }
 \description{
-Make weighted sum-to-zero contrasts for a factor
+Make weighted sum-to-zero contrasts for a single factor
 }
 \examples{
 x <- factor(rep(letters[1:3], times=4:6))

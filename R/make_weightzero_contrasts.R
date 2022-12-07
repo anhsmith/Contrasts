@@ -1,8 +1,8 @@
-#' Make weighted sum-to-zero contrasts for a factor
+#' Make weighted sum-to-zero contrasts for a single factor
 #'
-#' @param x
+#' @param x A vector from which to to make contrasts. Can be character or factor.
 #'
-#' @return cont
+#' @return \code{make_weightzero_contrasts}
 #' @export
 #'
 #' @examples
