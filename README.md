@@ -1,10 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # Contrasts
-
-<!-- badges: start -->
-<!-- badges: end -->
 
 ## Installation
 
@@ -31,31 +26,36 @@ library(dplyr)
 #>     intersect, setdiff, setequal, union
 ```
 
-Take a factor `x` and make contrasts.
+Make a factor `x` with three levels and uneven sample sizes.
 
 ``` r
 x = factor(rep(letters[1:3], times=4:6))
-bind_cols(x = x, make_weightzero_contrasts(x))
-#>    x     b          c
-#> 1  a -0.25 -0.2500000
-#> 2  a -0.25 -0.2500000
-#> 3  a -0.25 -0.2500000
-#> 4  a -0.25 -0.2500000
-#> 5  b  0.20  0.0000000
-#> 6  b  0.20  0.0000000
-#> 7  b  0.20  0.0000000
-#> 8  b  0.20  0.0000000
-#> 9  b  0.20  0.0000000
-#> 10 c  0.00  0.1666667
-#> 11 c  0.00  0.1666667
-#> 12 c  0.00  0.1666667
-#> 13 c  0.00  0.1666667
-#> 14 c  0.00  0.1666667
-#> 15 c  0.00  0.1666667
 ```
 
-Take a factor `x` and a factor `y_in_x` that is nested in `x`, and make
-contrasts for each.
+Make the contrasts.
+
+``` r
+make_weightzero_contrasts(x)
+#>        b          c
+#> 1  -0.25 -0.2500000
+#> 2  -0.25 -0.2500000
+#> 3  -0.25 -0.2500000
+#> 4  -0.25 -0.2500000
+#> 5   0.20  0.0000000
+#> 6   0.20  0.0000000
+#> 7   0.20  0.0000000
+#> 8   0.20  0.0000000
+#> 9   0.20  0.0000000
+#> 10  0.00  0.1666667
+#> 11  0.00  0.1666667
+#> 12  0.00  0.1666667
+#> 13  0.00  0.1666667
+#> 14  0.00  0.1666667
+#> 15  0.00  0.1666667
+```
+
+Take factor `x`, along with a factor `y_in_x` nested in `x`, and make
+contrasts for both.
 
 ``` r
 y_in_x = factor(paste0(x,c(1,1,2,2,1,1,2,2,3,1,2,2,2,3,3)))
