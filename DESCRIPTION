@@ -1,12 +1,21 @@
 Package: Contrasts
-Title: What the Package Does (One Line, Title Case)
+Title: Weighted sum-to-zero contrasts
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Adam", "Smith", , "anhsmith@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0059-6206"))
+Description: This contains some functions to convert a factor with k levels into a set of k-1 orthogonal sum-to-zero contrasts that are weighted by the inverse sample sizes of the groups. It does not assign contrasts to a factor in the traditional way. There is also a function for creating contrasts for a factor y nested in x. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.2
+URL: https://anhsmith.github.io/Contrasts/
+Imports: 
+    dplyr,
+    magrittr,
+    tibble,
+    tidyr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
