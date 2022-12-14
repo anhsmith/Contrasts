@@ -1,9 +1,16 @@
 Package: Contrasts
 Title: Weighted sum-to-zero contrasts
 Version: 0.0.0.9000
-Authors@R: 
-    person("Adam", "Smith", , "anhsmith@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-0059-6206"))
+Authors@R: c(
+    person("Adam", "Smith", 
+           email = "anhsmith@gmail.com", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0059-6206")) ,
+    person("Marti", "Anderson", 
+           email = "marti@primer-e.co.nz",
+           role = c("aut"),
+           comment = c(ORCID = "0000-0002-4018-4049"))
+           )
 Description: This contains some functions to convert a factor with k levels into a set of k-1 orthogonal sum-to-zero contrasts that are weighted by the inverse sample sizes of the groups. It does not assign contrasts to a factor in the traditional way. There is also a function for creating contrasts for a factor y nested in x. 
 License: MIT + file LICENSE
 Encoding: UTF-8

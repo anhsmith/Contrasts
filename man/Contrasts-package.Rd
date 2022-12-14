@@ -18,5 +18,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Adam Smith \email{anhsmith@gmail.com} (\href{https://orcid.org/0000-0003-0059-6206}{ORCID})
 
+Authors:
+\itemize{
+  \item Marti Anderson \email{marti@primer-e.co.nz} (\href{https://orcid.org/0000-0002-4018-4049}{ORCID})
+}
+
 }
 \keyword{internal}

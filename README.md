@@ -11,6 +11,26 @@ You can install the development version of Contrasts from
 devtools::install_github("anhsmith/Contrasts")
 ```
 
+## What does it do?
+
+This package contains functions for converting a factor with $k$ levels
+into $k-1$ contrasts. The contrasts are a set of numerical variables
+that encode the levels of a factor.
+
+The contrasts have the following properties:
+
+- sum to zero
+- the values are inversely weighted by sample sizes of the groups
+- are orthogonal to each other
+
+Also included is a function for making contrasts for a factor `y_in_x`
+nested in `x`, where a separate set of contrasts are made for the levels
+of `y_in_x` within each level of `x`.
+
+This code was created so that factors could be coded for inclusion in
+distance-based linear models (DISTLM) using the software Primer
+(www.primer-e.co.nz).
+
 ## Example
 
 ``` r
