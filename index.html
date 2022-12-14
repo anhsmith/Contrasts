@@ -68,6 +68,19 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"anhsmith/Contrasts"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="what-does-it-do">What does it do?<a class="anchor" aria-label="anchor" href="#what-does-it-do"></a>
+</h2>
+<p>This package contains functions for converting a factor with <span class="math inline"><em>k</em></span> levels into <span class="math inline"><em>k</em> − 1</span> contrasts. The contrasts are a set of numerical variables that encode the levels of a factor.</p>
+<p>The contrasts have the following properties:</p>
+<ul>
+<li>sum to zero</li>
+<li>the values are inversely weighted by sample sizes of the groups</li>
+<li>are orthogonal to each other</li>
+</ul>
+<p>Also included is a function for making contrasts for a factor <code>y_in_x</code> nested in <code>x</code>, where a separate set of contrasts are made for the levels of <code>y_in_x</code> within each level of <code>x</code>.</p>
+<p>This code was created so that factors could be coded for inclusion in distance-based linear models (DISTLM) using the software Primer (www.primer-e.co.nz).</p>
+</div>
+<div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -155,6 +168,7 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Adam Smith <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-0059-6206" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Marti Anderson <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-4018-4049" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -166,7 +180,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by Adam Smith.</p>
+<p>Developed by Adam Smith, Marti Anderson.</p>
 </div>
 
 <div class="pkgdown-footer-right">
